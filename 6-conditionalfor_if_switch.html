@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- conditional statment:
+      -> in javasript there is two type of conditional statement.
+      
+      (1) if statment
+         ->(a)if...else statment
+           (b)if...else if...else statement
+           (c)nested if
+
+      (2) switch statment
+    -->
+    <script>
+        // program of check minimum number from 2 values
+
+        let n1 =80;
+        let n2 =100;
+
+        if(n1 < n2){
+            document.writeln(n1 + " is minimum");
+        }else if(n2 < n1){
+            document.writeln(n2 + " is minimum");
+        }else {
+            document.writeln(n1 + " and " + n2 + " both are same")
+        }
+
+
+        document.write("<br>")
+        document.write("<br>")
+
+        let week =6;
+
+        switch(week){
+             case 1:
+                document.write("Sunday");
+                break;
+
+             case 2:
+                document.write("Monday");
+                break;
+
+             case 3:
+                document.write("Tuesday");
+                break;
+
+             case 4:
+                document.write("Wednesday");
+                break;
+
+             case 5:
+                document.write("Thursday");
+                break;
+
+             case 6:
+                document.write("Friday");
+                break;
+
+             case 7:
+                document.write("Saturday");
+                break;
+
+             default:
+                 document.write("wrong")   
+        }
+        
+    </script>
+
+    
+</body>
+</html>

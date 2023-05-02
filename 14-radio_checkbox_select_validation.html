@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            color: red;
+        }
+    </style>
+    <script>
+        function check_valid(){
+            let male = document.getElementById("male").checked;
+            let famale = document.getElementById("famale").checked;
+            let other = document.getElementById("other").checked;
+            if(male == false && famale == false && other == false){
+                document.getElementById("msg1").innerText = "Select gender"
+                return false;
+            }
+
+            let c1 = document.getElementById("c1").checked;
+            let c2 = document.getElementById("c2").checked;
+            let c3 = document.getElementById("c3").checked;
+            if(c1 == false && c2 == false && c3 == false ){
+                document.getElementById("msg2").innerText = "select hobbies"
+                return false
+            }
+            let city = document.getElementById("city").value;
+            if(city == -1){
+                
+                document.getElementById("msg3").innerText = "select city"
+                return false
+            }    
+
+        }
+    </script>
+</head>
+<body>
+    <form action="#">
+        <div>
+            <label>Gender:</label>
+            <input type="radio" name="gen" id="male">Male
+            <input type="radio" name="gen" id="famale">Famale
+            <input type="radio" name="gen" id="other">Other
+        </div> 
+        <span id="msg1"></span>
+        <br>
+        <br>
+        <div>
+            <label>Hobbies</label>
+            <input type="checkbox" name="" id="c1">reading
+            <input type="checkbox" name="" id="c2">playing
+            <input type="checkbox" name="" id="c3">danceing
+        </div>
+        <span id="msg2"></span>
+        <br>
+        <br>
+        <div>
+            <label>City</label>
+            <select name="" id="city">
+                <option value="-1">----select city----</option>
+                <option>Surat</option>
+                <option>Ahemdabad</option>
+                <option>Bhavnager</option>
+                <option>Bharuch</option>
+            </select>
+            <span id="msg3"></span>
+
+        </div>
+        <br>
+        <br>
+        <button  type="submit" onclick=" return check_valid()">click</button>
+
+
+
+    </form>
+
+</body>
+</html>
