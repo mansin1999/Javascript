@@ -1,0 +1,307 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0px 50px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ====================== header ===================== */
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: 0.5s all linear;
+    z-index: 1;
+}
+
+.header-p {
+    padding: 20px 0px;
+}
+
+.header .header-f {
+    display: flex;
+    align-items: center;
+}
+
+.header .header-f .logo {
+    flex: 1;
+
+}
+
+.header .header-f .logo h1 {
+    color: white;
+    font-size: 40px;
+}
+
+.header .header-f .logo a {
+    color: white;
+}
+
+.header .header-f .nav {
+    flex: 2;
+}
+
+.header .header-f .nav ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.header .header-f .nav ul a {
+    color: white;
+}
+
+.header .header-f .nav ul .btn-close {
+    display: none;
+    height: 35px;
+    width: 35px;
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.header .header-f .theme {
+    flex: 0.5;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 20px;
+    color: white;
+    font-size: 25px;
+}
+
+.header .header-f .theme .dip_btn {
+    height: 35px;
+    width: 35px;
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 5px;
+    display: none;
+}
+
+.bgimg img {
+    height: auto;
+    width: 100%;
+    z-index: -1;
+}
+
+.header .header-f .theme .fa-moon {
+    cursor: pointer;
+}
+
+
+/* ==========css for scroll menu =============*/
+
+.header-fix {
+    background-color: rgb(222, 222, 241);
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.header-fix .header-f .logo h1 {
+    color: black;
+}
+
+.header-fix .header-f .logo a {
+    color: black;
+}
+
+.header-fix .header-f .nav ul a {
+    color: black;
+    font-weight: 700;
+}
+
+
+
+.header-fix .header-f .theme {
+    color: black;
+}
+
+
+
+/* ============= theme change =================== */
+
+.dark_mode {
+    background-color: black;
+    color: white;
+}
+
+.dark_mode .header .header-f .logo h1 {
+    color: black;
+    font-size: 40px;
+}
+
+.dark_mode .header .header-f .logo a {
+    color: black;
+}
+
+.dark_mode .header .header-f .nav ul a {
+    color: black;
+    font-weight: 700;
+}
+
+
+
+.dark_mode .header {
+    background-color: rgb(133, 133, 204);
+}
+
+
+.dark_mode .header .header-f .theme .fa-sun {
+    color: black;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.dark_mode .bgimg img {
+    opacity: 0.5;
+}
+
+
+
+/* =============================== Media Querry ========================== */
+
+@media (max-width:576px) {
+
+    .header .header-f .theme .dip_btn {
+        height: 35px;
+        width: 35px;
+        background-color: transparent;
+        border: 2px solid black;
+        border-radius: 5px;
+        display: block;
+        position: relative;
+        z-index: 0;
+    }
+
+    .header .header-f .nav {
+        display: none;
+    }
+
+    .header .header-f .show_menu {
+        display: block;
+        background-color: rgb(19, 19, 68);
+        position: absolute;
+        top: 26px;
+        right: 0;
+        height: auto;
+        width: 150px;
+        z-index: 1;
+    }
+
+    .header .header-f .show_menu ul {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .header .header-f .nav ul .btn-close {
+        display: block;
+        height: 35px;
+        width: 35px;
+        background-color: transparent;
+        border: 2px solid black;
+        border-radius: 5px;
+        margin: auto;
+    }
+
+}
+
+@media (min-width:576px) {
+
+    .header .header-f .theme .dip_btn {
+        height: 35px;
+        width: 35px;
+        background-color: transparent;
+        border: 2px solid black;
+        border-radius: 5px;
+        display: block;
+        position: relative;
+        z-index: 0;
+    }
+
+    .header .header-f .nav {
+        display: none;
+    }
+
+    .header .header-f .show_menu {
+        display: block;
+        background-color: rgb(19, 19, 68);
+        position: absolute;
+        top: 26px;
+        right: 0;
+        height: auto;
+        width: 150px;
+        z-index: 1;
+    }
+
+    .header .header-f .show_menu ul {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .header .header-f .nav ul .btn-close {
+        display: block;
+        height: 35px;
+        width: 35px;
+        background-color: transparent;
+        border: 2px solid black;
+        border-radius: 5px;
+        margin: auto;
+    }
+}
+
+@media (min-width:992px) {
+
+    .header .header-f .theme .dip_btn {
+        height: 35px;
+        width: 35px;
+        background-color: transparent;
+        border: 2px solid black;
+        border-radius: 5px;
+        display: none;
+        position: relative;
+        z-index: 0;
+    }
+
+    .header .header-f .nav {
+        display: block;
+    }
+
+    .header .header-f .show_menu {
+        display: none;
+        background-color: rgb(19, 19, 68);
+        position: absolute;
+        top: 26px;
+        right: 0;
+        height: auto;
+        width: 150px;
+        z-index: 1;
+    }
+
+
+
+    .header .header-f .nav ul .btn-close {
+        display: none;
+        height: 35px;
+        width: 35px;
+        background-color: transparent;
+        border: 2px solid black;
+        border-radius: 5px;
+        margin: auto;
+    }
+}
