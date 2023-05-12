@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn{
+            height:30px;
+            width: 100px;
+            border: 1px solid black;
+            border-radius: 5px;
+            font-size: 20px;
+            color: aliceblue;
+            margin-left:0%;
+            background-color: blueviolet;
+
+        }
+        .btn:hover{
+            background-color: rgb(79, 24, 131);
+            cursor: pointer;
+        }
+        .t1{
+            font-size: 15px;
+            height:25px;
+            width: 190px;
+            border: 1px solid black;
+            border-radius: 5px;
+          }
+        .t2{
+            text-align: center;
+            font-size: 30px;
+            color: rgb(13, 88, 40);
+          }
+
+        .lable{
+            font-size: 25px;
+        }
+
+        .m1{
+            text-align: center;
+            margin-left: 38%;
+            height:550px;
+            width: 400px;
+            border: 3px solid black;
+            border-radius: 5px;
+            font-size: 20px;
+            margin-right:18%;
+        }
+        p{
+            text-align: center;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+
+ <div class="t2"><h1>Display maths table.</h1></div> <br> 
+ <div class="m1">
+     <div class="sum">
+      <label class="lable"> Enter any number:</label>
+      <input type="text" id="number" class="t1"><br><br><br>
+      <input type="button" value="Display" onClick="disply_value()"  class="btn"/>
+      <p id="result"></p>
+     </div>
+
+</div>
+
+
+    <script>
+        function disply_value(){
+            var number = document.getElementById("number").value;
+            var out = ""; //display number
+            for (var i = 1; i <= 10; i++) {
+                out = out + number + " * " + i + " = " + number * i + "<br>";
+            }
+            document.getElementById("result").innerHTML = out;
+
+        }
+    </script>
+</div>
+</body>
+</html>
