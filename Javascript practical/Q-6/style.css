@@ -1,0 +1,158 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.container{
+    margin: 0px 50px;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+
+/* ===================== header ====================== */
+
+.header{
+    background-color: black;
+}
+.header-p{
+    padding: 10px 0px;
+}
+.header .header-flex{
+    display: flex;
+    align-items: center;
+}
+.header .header-flex .logo{
+    flex: 1;
+}
+.header .header-flex .logo img{
+    width: 70px;
+    height: 70px;
+}
+.header .header-flex .nevigation{
+    flex:2 ;
+}
+.header .header-flex .nevigation ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+.header .header-flex .nevigation ul a{
+    color: aliceblue;
+    font-size: 25px;
+}
+.header .header-flex .nevigation ul a:hover{
+    color: aqua;
+    border-bottom: 1px solid aqua;
+}
+
+/* ============== close btn pachithi ============= */
+.header .header-flex .nevigation ul .close-btn{
+    display: none;
+    height: 30px;
+    width: 30px;
+    background-color: red ;
+    border: 2px solid white;
+    border-radius: 5px;
+    color: aliceblue;
+
+}
+/* =============================================== */
+
+.header .header-flex .theme{
+    flex: 0.5;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    color: aliceblue;
+    gap:30px;
+    font-size: 20px;
+}
+.header .header-flex .theme .display-btn{
+    display:none;
+    height: 30px;
+    width: 30px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 5px;
+    color: aliceblue;
+    z-index: 0;
+}
+
+/* ================= randomly class ==================== */
+/* .show_menu{
+    background-color: rgb(43, 42, 42);
+} */
+
+/* ================== media screen ===================== */
+
+@media (max-width:576px) {
+    .header .header-flex .theme .display-btn{
+        display:block;
+        position: relative;
+    }
+
+/* ============== close btn pachithi ============= */
+     .header .header-flex .nevigation ul .close-btn{
+    display:block;
+    }
+
+    .header .header-flex .nevigation{
+        display: none;
+    }
+    .header .header-flex .show_menu{
+        display: block;
+        position: absolute;
+        height: auto;
+        width:50% ;
+        right: 0px;
+        top:30px;
+        background-color: rgb(43, 42, 42);
+        border-radius:3px;
+        z-index: 1;
+        
+    }
+    .header .header-flex .show_menu ul{
+        flex-direction: column;
+        align-items:  center;
+        gap: 30px;
+        font-size: 20px;
+        padding-top: 5px;
+        padding-bottom:30px;
+
+    }
+    .header .header-flex .show_menu ul a:hover{
+        color: aqua;
+        border-bottom: 1px solid aqua;
+    }
+   
+}
+
+@media (min-width:900px) {
+
+    .header .header-flex .nevigation ul a{
+        color: aliceblue;
+        font-size: 20px;
+    }
+    .header .header-flex .nevigation ul a:hover{
+        color: aqua;
+        border-bottom: 1px solid aqua;
+    }
+    
+    .header .header-flex .theme .display-btn{
+        display:none;
+    }
+
+/* ============== close btn pachithi ============= */
+     .header .header-flex .nevigation ul .close-btn{
+    display:none;
+    }
+
+    .header .header-flex .nevigation{
+        display: block;
+    }
+
+   
+}
