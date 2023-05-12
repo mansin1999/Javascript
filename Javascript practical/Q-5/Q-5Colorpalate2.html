@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .button1{
+            height: 30px;
+            width: 100px;
+            border: 1px solid black;
+            border-radius:5px;
+            font-size: 20px;
+        
+            margin: 10px;
+            background-color: rgb(5, 151, 5);
+        }
+        .button1:hover{
+            background-color: rgb(11, 133, 11);
+            cursor: pointer;
+        }
+
+        .button2{
+            height: 30px;
+            width: 100px;
+            border: 1px solid black;
+            border-radius:5px;
+            font-size: 20px;
+        
+            margin: 10px;
+            background-color: blue;
+        }
+        .button2:hover{
+            background-color: rgb(4, 4, 194);
+            cursor: pointer;
+        }
+
+        .green1{
+            background-color: rgb(7, 99, 7);
+        }
+        .blue1{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <br><br>
+    <button onclick="return green()" class="button1">Green</button>
+    <button id="btn1" class="button2">Blue</button>
+    <br><br>
+    <hr>
+    <br><br>
+    <div id="grn" style="height: 200px; width: 200px;"></div>
+    <br><br><br>
+    <div id="bl" style="height: 200px; width: 200px;"></div>
+
+    <script>
+        //  using function
+        function green(){
+          let grn = document.getElementById("grn");
+          grn.classList.toggle("green1");
+          return false;
+        }
+
+        // using addeventlistener
+        let btn1 = document.getElementById("btn1");
+        btn1.addEventListener("click", function(){
+          let bl = document.getElementById("bl");
+          bl.classList.toggle("blue1");
+          return false;
+        })
+
+
+
+    </script>
+
+</body>
+</html>
