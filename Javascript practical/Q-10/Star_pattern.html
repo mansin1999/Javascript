@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Right pascal star pattern - javascript</title>
+    <style>
+        *{
+            font-size: 40px;
+            color: rgb(13, 104, 35);
+        }
+        h1{
+            color: rgb(93, 28, 154);
+        }
+   </style>
+</head>
+<body>
+  <h1>Star pattern in javascript</h1>
+
+  <script>
+    let n = 7; // you can take input from the prompt or change the value
+    let string = "";
+    for (let i = 1; i <= n; i++) {
+        for (let j = 0; j < i; j++) {
+            string += "*";
+        }
+        string += "\n";
+    }
+    for (let i = 1; i <= n - 1; i++) {
+        for (let j = 0; j < n - i; j++) {
+            string += "*";
+        }
+        string += "\n";
+    }
+    document.write(`<pre>${string}</pre>`);
+  </script>
+</body>
+</html>
